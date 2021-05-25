@@ -1,0 +1,32 @@
+## -> Run in Windows PowerShell <- ##
+
+## show adapter
+-> Get-NetAdapter
+
+## show  virtual switch
+-> Get-VMSwitch
+
+## create virtual switch type internal
+-> New-VMSwitch -SwitchName "SwitchName" -SwitchType Internal
+
+## Multiple NAT networks are not supported
+## show nat network
+-> Get-NetNat
+## remove nat network
+-> Get-NetNat | Remove-NetNat
+
+
+
+Get-NetIPAddress -InterfaceAlias "vEthernet (WSL)"
+
+
+<-------------------------------------------------------------------------------------------------------->
+
+## -> Create Cluster <- ##
+1. Create Virtual Switch Type Internal
+-> New-VMSwitch -SwitchName "vEthernet-Internal-ME" -SwitchType Internal
+2. Create Virtual Switch Type External
+   2.1 Show adapter
+   -> Get-NetAdapter
+   2.2 create virtual switch external
+   -> New-VMSwitch -name "vEthernet-External-ME"  -NetAdapterName "Wi-Fi" -AllowManagementOS $true
