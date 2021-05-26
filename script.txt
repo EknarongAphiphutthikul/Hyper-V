@@ -1,3 +1,20 @@
+## -> Create Mutiple  Virtual Machine <- ##
+1. Create Virtual Switch Type Internal
+-> New-VMSwitch -SwitchName "vEthernet-Internal-ME" -SwitchType Internal
+2. Create Virtual Switch Type External
+   2.1 Show adapter
+   -> Get-NetAdapter
+   2.2 create virtual switch external
+   -> New-VMSwitch -name "vEthernet-External-ME"  -NetAdapterName "Wi-Fi" -AllowManagementOS $true
+3. Download Redhat server OR Ubuntu Server ISO format
+4. Install Virtual Machine From ISO
+5. add vEthernet-Internal-ME and vEthernet-External-ME to Virtual Machine
+6. manual config IPv4 vEthernet-Internal-ME in Virtual Machine
+7. Ping between Virtual Machine
+
+
+<-------------------------------------------------------------------------------------------------------->
+
 ## -> Run in Windows PowerShell <- ##
 
 ## show adapter
@@ -16,17 +33,11 @@
 -> Get-NetNat | Remove-NetNat
 
 
-
+## Show Detail vEthernet (WSL)
 Get-NetIPAddress -InterfaceAlias "vEthernet (WSL)"
 
 
-<-------------------------------------------------------------------------------------------------------->
-
-## -> Create Cluster <- ##
-1. Create Virtual Switch Type Internal
--> New-VMSwitch -SwitchName "vEthernet-Internal-ME" -SwitchType Internal
-2. Create Virtual Switch Type External
-   2.1 Show adapter
-   -> Get-NetAdapter
-   2.2 create virtual switch external
-   -> New-VMSwitch -name "vEthernet-External-ME"  -NetAdapterName "Wi-Fi" -AllowManagementOS $true
+## HOW TO ENABLE PROCESSOR RESOURCE CONTROLS IN HYPER-V
+## https://huybien.com/how-to-enable-processor-resource-controls-in-hyper-v/
+Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervisor"; ID=2} -MaxEvents 1
+C:\Windows\System32\bcdedit.exe /set hypervisorschedulertype Core
