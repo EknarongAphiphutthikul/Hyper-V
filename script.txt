@@ -24,6 +24,33 @@
 ## Install Net tools
 -> sudo apt install net-tools
 
+## Fix Ip vEthernet-Internal-ME
+## Ubuntu use NetPlan the default network management tool.
+## Show name of the ethernet interface you want to configure
+-> ip link
+## On cloud : you'll need to disable.
+-> sudo nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+   network: {config: disabled}
+## edit file in /etc/netplan/
+## the filename may not the same example
+-> sudo nano /etc/netplan/01-netcfg.yaml
+   set dhcp4: no or false
+   set addresses
+   Example :
+               network:
+                  version: 2
+                  renderer: networkd
+                  ethernets:
+                     ens3:
+                        dhcp4: no
+                        addresses:
+                        - 192.168.121.221/24
+                        gateway4: 192.168.121.1
+                        nameservers:
+                           addresses: [8.8.8.8, 1.1.1.1]
+-> sudo netplan apply
+
+
 <-------------------------------------------------------------------------------------------------------->
 
 ## -> Run in Windows PowerShell <- ##
