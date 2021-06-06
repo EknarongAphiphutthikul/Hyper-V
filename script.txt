@@ -50,6 +50,37 @@
                            addresses: [8.8.8.8, 1.1.1.1]
 -> sudo netplan apply
 
+## check ufw.service
+-> sudo systemctl status ufw.service
+## check status firewall
+-> sudo ufw status
+## status For more detailed
+-> sudo ufw status verbose
+## enable your firewall
+-> sudo ufw enable
+## disable your firewall
+-> sudo ufw disable
+## Default Policy firewall
+-> sudo ufw default allow outgoing
+-> sudo ufw default deny incoming
+## Allow ssh
+-> sudo ufw allow ssh
+## Example Allow
+-> sudo ufw allow 80/tcp comment 'accept Apache'
+-> sudo ufw allow 443/tcp comment 'accept HTTPS connections'
+## Delete
+-> sudo ufw status numbered
+-> sudo ufw delete <number>
+## Reset ufw
+-> sudo ufw reset
+## Reload ufw
+-> sudo ufw reload
+## Show rule List
+-> sudo ufw show listening
+-> sudo ufw show added
+## View Firewall Log
+-> sudo more /var/log/ufw.log
+-> sudo tail -f /var/log/ufw.log
 
 <-------------------------------------------------------------------------------------------------------->
 
