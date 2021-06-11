@@ -18,7 +18,7 @@ Get-NetAdapter
 ## Download Ubuntu Server ISO format
 [https://ubuntu.com/download/server](https://ubuntu.com/download/server)
 ## Install Virtual Machine From ISO
-Open Hyper-V Manager and Click Quick Create...
+- Open Hyper-V Manager and Click Quick Create...
 ![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/QuickCreate.png)
 ![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/SelectISO.png)
 ## Add vEthernet-Internal-ME and vEthernet-External-ME to Virtual Machine
