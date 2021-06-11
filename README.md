@@ -4,6 +4,7 @@ For internal cluster
 ```powershell
 New-VMSwitch -SwitchName "vEthernet-Internal-ME" -SwitchType Internal
 ```
+  
 ## Create Virtual Switch Type External
 For VM connect to internet
 - Show adapter
@@ -14,11 +15,12 @@ Get-NetAdapter
 ```powershell
   New-VMSwitch -name "vEthernet-External-ME"  -NetAdapterName "Wi-Fi" -AllowManagementOS $true
 ```
-
+  
 ## Download Ubuntu Server ISO format
 [https://ubuntu.com/download/server](https://ubuntu.com/download/server)
+  
 ## Install Virtual Machine From ISO
-- Open Hyper-V Manager and Click Quick Create...
+- Open Hyper-V Manager and Click Quick Create...  
 ![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/QuickCreate.png)
 ![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/SelectISO.png)
 ## Add vEthernet-Internal-ME and vEthernet-External-ME to Virtual Machine
