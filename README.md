@@ -25,14 +25,14 @@ Get-NetAdapter
 
 ## Install Virtual Machine From ISO
 - Open Hyper-V Manager and Click Quick Create...  
-![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/QuickCreate.png)
-![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/SelectISO.png)
+![](https://github.com/EknarongAphiphutthikul/Install-Hyper-V/blob/main/QuickCreate.png)
+![](https://github.com/EknarongAphiphutthikul/Install-Hyper-V/blob/main/SelectISO.png)
 
 <br/>
 
 ## Add vEthernet-Internal-ME and vEthernet-External-ME to Virtual Machine
-![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/AddInternalNetwork.png)
-![](https://github.com/EknarongAphiphutthikul/Hyper-V/blob/main/AddExternalNetwork.png)
+![](https://github.com/EknarongAphiphutthikul/Install-Hyper-V/blob/main/AddInternalNetwork.png)
+![](https://github.com/EknarongAphiphutthikul/Install-Hyper-V/blob/main/AddExternalNetwork.png)
 
 <br/>
 
